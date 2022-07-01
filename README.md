@@ -10,7 +10,6 @@ git --help
 curl --help
 
 #generate Dockerfile
-
 #-------------------
 FROM alpine:3.4
 MAINTAINER Stephane Rey stephane.rey@wago.com
@@ -19,7 +18,6 @@ RUN apk add vim curl
 
 
 #copy source from windows host and log in linux system
-
 #-----------------------------------------------------
 pscp * root@10.203.21.131:/var/tmp
 cd /var/tmp
