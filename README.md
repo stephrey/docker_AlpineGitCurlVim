@@ -5,9 +5,13 @@ how-to
 ---------------------------------------------------
 
 docker run -it --rm alpine /bin/sh
+
 whoami
+
 vim --help
+
 git --help
+
 curl --help
 
 
@@ -15,8 +19,11 @@ curl --help
 --------------------
 
 FROM alpine:3.4
+
 MAINTAINER Stephane Rey stephane.rey@wago.com
+
 RUN apk update
+
 RUN apk add vim curl
 
 
@@ -24,6 +31,7 @@ RUN apk add vim curl
 ------------------------------------------------------
 
 pscp * root@10.203.21.131:/var/tmp
+
 cd /var/tmp
 
 
@@ -43,6 +51,7 @@ docker images -a
 -----------------------
 
 docker images --filter "dangling=true"
+
 docker rmi $(docker images -q --filter "dangling=true")
 
 
@@ -50,10 +59,15 @@ docker rmi $(docker images -q --filter "dangling=true")
 --------------------
 
 docker run -it --rm stephrey/myalpine:1.0 /bin/sh
+
 whoami
+
 vim --help
+
 git --help
+
 curl --help
+
 exit
 
 
@@ -61,5 +75,7 @@ exit
 -------------------------------------------
 
 docker login
+
 stephrey:ufoga73i...
+
 docker push stephrey/myalpine:1.0
