@@ -2,9 +2,7 @@ how-to
 ******
 
 #run alpine and check that package aren't installed
-
 #--------------------------------------------------
-
 docker run -it --rm alpine /bin/sh
 whoami
 vim --help
